@@ -35,6 +35,8 @@ let lastActivityTime;
 Promise.all([createPost({ title: 'newPOST' }), updateLastUserActivityTime()])
     .then((values) => {
         lastActivityTime = values[1];
+
+        
         printPost();
         console.log(`the new post is created @ ${lastActivityTime}`);
     })
